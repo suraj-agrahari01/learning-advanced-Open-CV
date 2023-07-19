@@ -39,18 +39,23 @@ def rotate(img, angle, rotPoint=None):
 
 rotated = rotate(img, -45)
 # for clockwise use -ve value and for anti clockwise use +ve value 
+# during rotation if there is no image then it will be black 
+
 
 cv.imshow('Rotated', rotated)
 
 rotated_rotated = rotate(img, -90)
 cv.imshow('Rotated Rotated', rotated_rotated)
 
-# Resizing
+# for Resizing
 resized = cv.resize(img, (500,500), interpolation=cv.INTER_CUBIC)
 cv.imshow('Resized', resized)
+#  for shrinking use cv.INTER_ARIAL and if you are enlarging use  cv.INTER_CUBIC or cv.INTER_LINER
+
 
 # Flipping
 flip = cv.flip(img, -1)
+# 0 means to tip vertically , 1 means flip   horizontally and -1 means both 
 cv.imshow('Flip', flip)
 
 # Cropping
